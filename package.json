@@ -1,0 +1,17 @@
+{
+  "name": "medo-seating-plan",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k \"npm --workspace backend run dev\" \"npm --workspace frontend run dev\"",
+    "build": "npm --workspace frontend run build",
+    "start": "npm --workspace backend run start",
+    "lint": "npm --workspace frontend run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
